@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <meta name="csrf-token" content="1244124">
+        <title>Frontend | Головна</title>
+        <meta name="description" content="Головна ЛІГА.net">
+
+        <link rel="shortcut icon" href="/assets/ico/favicon.ico">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tinos:wght@400;700&display=swap" rel="preload" as="font" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+
+      <script type="module" crossorigin src="/pages/home/index.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/css/global.css">
+      <link rel="stylesheet" crossorigin href="/pages/home/index.css">
+    </head>
+    <body class="body-class">
+        <div class="container">
+            <!-- nav-panel  -->
+<div class="nav-panel">
+
+<div class="nav-panel__scroll-top">
+    <svg width="14" height="16">
+    <use xlink:href="/assets/svg/sprite.svg#arrow-top"></use>
+    </svg>
+</div>
+
+<div class="nav-panel__list">
+    <a href="#" class="nav-panel__link">
+    <svg width="20" height="18">
+        <use xlink:href="/assets/svg/sprite.svg#home"></use>
+    </svg>
+    </a>
+    <div class="dropdown-widget nav-panel__language">
+    <div class="dropdown-widget__current">
+        UA
+    </div>
+
+    <ul class="dropdown-widget__list top">
+        <li class="dropdown-widget__item">
+        <a href="#" class="dropdown-widget__link">
+            EN
+        </a>
+        </li>
+
+        <li class="dropdown-widget__item">
+        <a href="#" class="dropdown-widget__link">
+            PL
+        </a>
+        </li>
+    </ul>
+    </div>
+
+    <button class="nav-panel__link js-toggle-menu" aria-label="bar">
+    <svg width="17" height="17">
+        <use xlink:href="/assets/svg/sprite.svg#bar"></use>
+    </svg>
+    </button>
+    <div class="dropdown-widget nav-panel__profile">
+    <div class="dropdown-widget__current">
+        <svg width="14" height="15">
+        <use xlink:href="/assets/svg/sprite.svg#user"></use>
+        </svg>
+    </div>
+
+    <ul class="dropdown-widget__list">
+        <li class="dropdown-widget__item">
+        <a href="#" class="dropdown-widget__link">
+            <svg class="dropdown-widget__icon">
+            <use xlink:href="/assets/svg/sprite.svg#settings"></use>
+            </svg>
+            Настройки
+        </a>
+        </li>
+        <li class="dropdown-widget__item">
+        <a href="#" class="dropdown-widget__link">
+            <svg class="dropdown-widget__icon">
+            <use xlink:href="/assets/svg/sprite.svg#alerts"></use>
+            </svg>
+            Підписка
+        </a>
+        </li>
+        <li class="dropdown-widget__item">
+        <a href="#" class="dropdown-widget__link">
+            <svg class="dropdown-widget__icon">
+            <use xlink:href="/assets/svg/sprite.svg#main"></use>
+            </svg>
+            Збережене
+        </a>
+        </li>
+        <li class="dropdown-widget__item">
+        <a href="#" class="dropdown-widget__link">
+            <svg class="dropdown-widget__icon">
+            <use xlink:href="/assets/svg/sprite.svg#mail"></use>
+            </svg>
+            Розсилка
+        </a>
+        </li>
+        <li class="dropdown-widget__item">
+        <a href="#" class="dropdown-widget__link">
+            <svg class="dropdown-widget__icon">
+            <use xlink:href="/assets/svg/sprite.svg#exit"></use>
+            </svg>
+            Вийти
+        </a>
+        </li>
+    </ul>
+    </div>
+</div>
+
+<div class="nav-panel__open"></div>
+</div>
+<!-- end nav-panel -->
+
+<!-- header -->
+<header class="header">
+<div class="header__top">
+    <a href="#" class="header__logo " aria-label="logo">
+    <svg class="header__logo-icon">
+        <use xlink:href="/assets/svg/sprite.svg#logo"></use>
+    </svg>
+    </a>
+
+    <div class="header__actions">
+    <!-- weather-widget -->
+    <!-- <a href="#" class="weather-widget header__weather">
+        <span class="weather-widget__temperature">
+            <svg class="weather-widget__temperature-icon">
+            <use xlink:href="/images/sprite.svg#weather"></use>
+            </svg>
+            -7°С
+        </span>
+        <span class="weather-widget__city">
+            Івано-Франківськ
+        </span>
+    </a> -->
+    <!-- end weather-widget -->
+
+
+    <label class="theme-switcher">
+        <input type="checkbox" class="theme-switcher__input">
+        <span class="theme-switcher__control"></span>
+    </label>
+
+    <div class="dropdown-widget header__language">
+        <div class="dropdown-widget__current">
+        UA
+        <svg width="10" height="6">
+            <use xlink:href="/assets/svg/sprite.svg#chevron-down"></use>
+        </svg>
+        </div>
+
+        <ul class="dropdown-widget__list">
+        <li class="dropdown-widget__item">
+            <a href="#" class="dropdown-widget__link">
+            EN
+            </a>
+        </li>
+
+        <li class="dropdown-widget__item">
+            <a href="#" class="dropdown-widget__link">
+            PL
+            </a>
+        </li>
+        </ul>
+    </div>
+
+    <button class="button button-sm button-outline-gray header__button hide-sm" id="js-disabled">Без реклами</button>
+    <button class="button button-sm header__button header__button--last">Підтримати</button>
+
+    <div class="dropdown-widget dropdown-widget--profile header__profile">
+        <div class="dropdown-widget__current js-show-auth">
+        <svg class="dropdown-widget__icon" width="14" height="15">
+            <use xlink:href="/assets/svg/sprite.svg#user"></use>
+        </svg>
+        Увійти
+        </div>
+    </div>
+
+    </div>
+</div>
+
+
+</header>
+<div class="header__bottom">
+    <div class="search-widget header__search-for-menu">
+    <form action="#" class="search-widget__form">
+        <input type="text" placeholder="Пошук по сайту" class="search-widget__input">
+        <button class="search-widget__send" aria-label="send-search">
+            <svg>
+                <use xlink:href="/assets/svg/sprite.svg#search-big"></use>
+            </svg>
+        </button>
+    </form>
+    </div>
+
+    <a href="#" class="header__home hide-sm" aria-label="home">
+        <svg class="header__home-icon">
+            <use xlink:href="/assets/svg/sprite.svg#home"></use>
+        </svg>
+    </a>
+    <nav class="header-menu header__menu">
+
+        <ul class="header-menu__list" id="menu">
+            <li class="header-menu__item">
+                <a href="#" class="header-menu__link">Новини</a>
+            </li>
+            <li class="header-menu__item is-dropdown">
+                <a href="#" class="header-menu__link">
+                Бізнес
+                <svg>
+                    <use xlink:href="/assets/svg/sprite.svg#chevron-down"></use>
+                </svg>
+                </a>
+                <ul class="header-menu__droplist">
+                <li>
+                    <a href="#" class="header-menu__link">Світ азарту</a>
+                </li>
+                <li>
+                    <a href="#" class="header-menu__link">Авто</a>
+                </li>
+                <li>
+                    <a href="#" class="header-menu__link">Політика</a>
+                </li>
+                <li>
+                    <a href="#" class="header-menu__link">Liga Plus</a>
+                </li>
+                </ul>
+            </li>
+            <li class="header-menu__item">
+                <a href="#" class="header-menu__link">Фінанси</a>
+            </li>
+            <li class="header-menu__item">
+                <a href="#" class="header-menu__link">Технології</a>
+            </li>
+            <li class="header-menu__item">
+                <a href="#" class="header-menu__link">Життя</a>
+            </li>
+            <li class="header-menu__item">
+                <a href="#" class="header-menu__link">Думки</a>
+            </li>
+            <li class="header-menu__item">
+                <a href="#" class="header-menu__link">ВІДЕО</a>
+            </li>
+            <li class="header-menu__item">
+                <a href="#" class="header-menu__link">Спецпроекти</a>
+            </li>
+            <li class="header-menu__item">
+                <a href="#" class="header-menu__link">LIGА PLUS</a>
+            </li>
+            <li class="header-menu__item">
+                <a href="#" class="header-menu__link">Промокоди</a>
+            </li>
+
+        </ul>
+        <span class="header-menu__button" style="display: none;">...</span>
+        <ul class="dropdown-widget header-menu__dropdown"></ul>
+    </nav>
+
+
+
+    <button type="button" class="header__search-btn js-toggle-search hide-sm" aria-label="search">
+        <svg>
+            <use xlink:href="/assets/svg/sprite.svg#search-big"></use>
+        </svg>
+    </button>
+</div>
+
+<div class="search-widget header__search">
+    <form action="#" class="search-widget__form">
+        <input type="text" placeholder="Що ви шукаєте?" class="search-widget__input">
+        <button class="search-widget__send" aria-label="send-search">
+            <svg>
+                <use xlink:href="/assets/svg/sprite.svg#search-big"></use>
+            </svg>
+        </button>
+    </form>
+</div>
+<!-- end header -->
+
+            
+    homepage1
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae inventore vitae minima, rem sit deleniti hic! Temporibus error minus repudiandae? Recusandae explicabo ut perferendis quasi voluptates hic at iste! Natus!
+    Itaque cumque possimus, minima repellendus nam animi corrupti suscipit doloremque quo aspernatur, ullam similique. Sunt perferendis quos, veritatis libero enim, adipisci explicabo, quis nihil molestias maxime vel ad quod quae!
+    Quisquam ea asperiores est sed tempore tempora similique sint, amet exercitationem doloremque cum quidem alias nostrum eos, excepturi, rerum cumque tenetur! Placeat quas error praesentium totam consectetur possimus doloribus veritatis?
+    Quidem qui aliquid perferendis odit omnis aliquam ad voluptas tempora, atque illum culpa itaque, laboriosam labore dolores nisi nihil rerum? Perspiciatis laudantium expedita dolorem quam, sapiente minus facere ipsum veritatis.
+    Labore numquam maiores deserunt quo similique, ad ratione, corporis repudiandae sapiente eligendi quas voluptas quaerat. Consequuntur in, quam dignissimos vero fuga fugiat eveniet voluptates vel rerum? Odio quae minima deleniti!
+    Saepe est aliquid, asperiores tempora magni et accusamus dolore facere numquam fugiat, ipsum sed minus debitis. In maxime accusantium dignissimos praesentium, nobis quasi quidem ratione. Tempore magnam recusandae blanditiis nulla?
+    Beatae illo dolorum molestias debitis praesentium neque quis quod totam placeat tenetur, impedit est, voluptatibus molestiae itaque doloribus reprehenderit excepturi pariatur temporibus et enim dicta vel unde numquam. Ad, neque.
+    Fugiat vel nostrum enim iusto sapiente expedita, sunt quasi itaque explicabo architecto dolorum aut doloribus voluptatum veritatis magni autem, assumenda id earum corrupti voluptatem at maiores optio debitis sequi. Porro.
+    Doloribus rem omnis mollitia. Veniam iste eveniet nihil rem quia perferendis excepturi eligendi odit dolore aliquam, ad ea maiores reiciendis earum optio distinctio! Laudantium odit cumque, necessitatibus vitae quisquam non?
+    Quidem dolores aspernatur animi numquam fugiat voluptates cum dicta dolore, ducimus nihil, quae dignissimos, ratione facere tenetur nesciunt praesentium quibusdam odit nostrum ex voluptatum laborum reiciendis? Atque dolore quod ex!
+    Placeat explicabo sint error inventore eveniet, dignissimos vitae odit blanditiis. Velit nemo magnam, mollitia facere veniam aliquid voluptatibus odit, placeat veritatis sed qui eum nulla dolore reiciendis saepe harum eveniet.
+    Aut, saepe. Veniam suscipit non nemo laborum, illo accusamus corrupti quisquam tenetur. Quae, dignissimos deleniti distinctio asperiores dolore omnis accusantium placeat itaque hic ea! Illum similique voluptatum ratione unde corrupti?
+    Magnam aut inventore veniam doloremque ipsa nobis totam. Laborum error sunt veniam impedit corporis natus reiciendis ipsam, ipsa culpa numquam est optio sapiente labore! Enim minima quaerat facilis deserunt aliquam.
+    Voluptatem alias enim nulla impedit sequi harum, voluptate officia repudiandae rem voluptatibus distinctio ex debitis minus ducimus non tenetur eveniet ea iure reiciendis nemo at explicabo? Nemo eveniet maiores reiciendis.
+    Impedit deleniti, dicta laudantium sed, in eligendi magnam maxime ea blanditiis sint est pariatur debitis ad culpa unde, asperiores at libero. Architecto omnis est non modi quidem, quis et explicabo!
+    Commodi, quod laboriosam eaque libero aliquid fuga pariatur assumenda, similique aspernatur non esse in! Incidunt omnis qui officia explicabo voluptas eum facilis sit inventore, fugit quisquam, non accusantium! Nulla, tempora.
+    Ullam aliquid aliquam fuga itaque cupiditate, voluptatibus ab animi molestias reiciendis neque voluptates voluptas ratione mollitia nulla. Repudiandae rerum odio totam expedita. Esse, commodi voluptates harum impedit laborum labore omnis.
+    Blanditiis adipisci maxime, quisquam deserunt ipsa beatae consequuntur! Quos, officiis facilis iusto facere vitae nobis suscipit reprehenderit eveniet quas aspernatur obcaecati consequatur pariatur rerum similique placeat doloribus enim itaque quam?
+    Tenetur aspernatur labore laboriosam nam, illo alias cupiditate perspiciatis, at nesciunt itaque praesentium nostrum obcaecati id rerum nihil quam aperiam earum minus accusamus autem magni nisi. In tenetur repudiandae magni?
+    Expedita ea perferendis quos sequi adipisci fugit voluptas culpa tenetur error voluptates unde, minima suscipit quibusdam porro nihil odio, repellendus debitis! Animi nihil, aspernatur laborum tempore incidunt sequi nisi sed!
+    Nemo minus soluta, debitis id minima blanditiis! Aspernatur est pariatur culpa consectetur iure nemo molestiae debitis expedita? Magni optio eveniet adipisci beatae minus repellendus aut praesentium exercitationem architecto. Quisquam, odit.
+    Libero dolore, est et ipsa eligendi laudantium alias, veritatis in molestiae sint atque. Numquam earum doloribus vero commodi laborum. Vel sunt cum quasi maiores eaque dolores, totam architecto dolorem nisi.
+    Voluptas deleniti nulla quae quod eum laborum et, illum minus delectus fugiat quibusdam ullam modi at. Alias sequi quidem incidunt quis quasi est blanditiis veniam provident suscipit, sed porro tempore?
+    Omnis reiciendis, amet asperiores nemo, hic blanditiis quas enim maxime quibusdam suscipit beatae at. Culpa dolor nobis veritatis tempore deserunt, corporis ratione quod dolores, maiores, veniam eaque numquam natus aliquam.
+    Enim quia ratione praesentium deleniti iusto! Repellendus necessitatibus dolorem laudantium nesciunt optio officiis voluptatum consequatur nam eos, perferendis amet recusandae beatae debitis! Rem, adipisci vitae culpa enim voluptate rerum. Consequatur.
+    Ex incidunt perspiciatis culpa possimus numquam amet consequuntur tempora, cum officiis, molestiae sit facilis cupiditate ducimus et iusto, veritatis quis consequatur facere saepe velit! Est animi dolorem corporis itaque earum.
+    Aliquam provident corrupti reprehenderit non nihil hic, pariatur, laudantium explicabo reiciendis totam eum repellendus aperiam? Possimus, dolorum sit itaque, modi blanditiis aliquam reprehenderit, eaque exercitationem ipsam omnis eius totam provident!
+    Quam corporis recusandae animi at et itaque dicta, dignissimos iure maxime hic, facere voluptatem rerum odio soluta quos enim expedita tempore, error quas officiis nostrum harum obcaecati nihil. Laboriosam, facere?
+    Dolorem laborum repellendus labore dolores quos ipsa qui doloribus temporibus. Fuga ullam, at consequuntur nihil magnam officia! Molestias temporibus sed cupiditate, fugit eum earum placeat, accusamus distinctio enim sunt laborum!
+    Dignissimos quos necessitatibus repellat odit quisquam. Labore quibusdam explicabo ratione voluptatibus odit ut saepe deserunt eum excepturi reiciendis laborum dolore dolores, ipsum sit doloribus impedit amet adipisci sed? Recusandae, accusamus.
+    <div class="button">button</div>
+  
+
+             <!-- footer -->
+ <footer class="footer">
+    <div class="footer__top">
+
+        <a href="#" class="footer__logo" aria-label="logo">
+            <svg class="footer__logo-icon" width="153" height="30">
+            <use xlink:href="/assets/svg/sprite.svg#footer-logo"></use>
+            </svg>
+        </a>
+
+      <!-- footer s-networks  -->
+      <ul class="s-networks footer__s-networks">
+          <li class="s-networks__item">
+              <a href="#" class="s-networks__link" aria-label="fb">
+              <svg class="s-networks__icon">
+                  <use xlink:href="/assets/svg/sprite.svg#fb"></use>
+              </svg>
+              </a>
+          </li>
+          <li class="s-networks__item">
+              <a href="#" class="s-networks__link" aria-label="inst">
+              <svg class="s-networks__icon">
+                  <use xlink:href="/assets/svg/sprite.svg#inst"></use>
+              </svg>
+              </a>
+          </li>
+          <li class="s-networks__item">
+              <a href="#" class="s-networks__link" aria-label="twiter">
+              <svg class="s-networks__icon">
+                  <use xlink:href="/assets/svg/sprite.svg#twiter-x"></use>
+              </svg>
+              </a>
+          </li>
+          <li class="s-networks__item">
+            <a href="#" class="s-networks__link" aria-label="threads">
+            <svg class="s-networks__icon">
+                <use xlink:href="/assets/svg/sprite.svg#threads"></use>
+            </svg>
+            </a>
+        </li>
+          <li class="s-networks__item">
+              <a href="#" class="s-networks__link" aria-label="tg">
+              <svg class="s-networks__icon">
+                  <use xlink:href="/assets/svg/sprite.svg#tg"></use>
+              </svg>
+              </a>
+          </li>
+          <li class="s-networks__item">
+            <a href="#" class="s-networks__link" aria-label="wa">
+            <svg class="s-networks__icon">
+                <use xlink:href="/assets/svg/sprite.svg#wa"></use>
+            </svg>
+            </a>
+        </li>
+          <li class="s-networks__item">
+              <a href="#" class="s-networks__link" aria-label="youtube">
+              <svg class="s-networks__icon">
+                  <use xlink:href="/assets/svg/sprite.svg#youtube"></use>
+              </svg>
+              </a>
+          </li>
+          <li class="s-networks__item">
+            <a href="#" class="s-networks__link" aria-label="tik-tok">
+            <svg class="s-networks__icon">
+                <use xlink:href="/assets/svg/sprite.svg#tik-tok"></use>
+            </svg>
+            </a>
+        </li>
+        
+      </ul>
+      <!-- end footer s-networks  -->
+      <div class="footer__buttons">
+        <a href="#" class="button button-outline-gray button-md button-lg footer__button">Без реклами</a>
+        <a href="#" class="button button-md button-lg footer__button">Підтримати</a>
+      </div>
+
+    </div>
+
+    <!-- footer menu  -->
+    <div class="footer-menu footer__menu">
+        <ul class="footer-menu__list">
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Новини</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Політика</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Суспільство</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Світ</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Політика</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Надзвичайні події </a>
+            </li><li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Київ</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Спорт</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Новини регіонів</a>
+            </li>
+        </ul>
+        <ul class="footer-menu__list">
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Бізнес</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Економіка</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Люди</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Ідеї та кейси</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">ProГаз</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">UAExport</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">ТЕК</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Авто</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Транспорт</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Нерухомість</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Продовольство</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">FMGG</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Новини компаній</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Фактологія</a>
+            </li>
+        </ul>
+        <ul class="footer-menu__list">
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Фінанси</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Економіка</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Банки</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Особисті гроші</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Фондовий ринок</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Конвертер валют</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Валюта</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Банківські метали</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Обрати кредит онлайн</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Новини компаній</a>
+            </li>
+
+        </ul>
+        <ul class="footer-menu__list">
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Tech</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Технології</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Телеком</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Гаджети</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">В Україні</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Стартапи</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Різне</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Новини компаній</a>
+            </li>
+
+        </ul>
+        <ul class="footer-menu__list">
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Life</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Історії</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Поради</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Пояснення</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Розваги</a>
+            </li>
+        </ul>
+        <ul class="footer-menu__list">
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Досьє</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Всі досьє </a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Персони</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Компанії</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Партії</a>
+            </li>
+            <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Свята</a>
+            </li><li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Організації</a>
+            </li>
+
+        </ul>
+    </div>
+    <!-- end footer menu  -->
+
+
+    <!-- footer-navigator  -->
+    <div class="footer-navigator footer__navigator">
+
+    <ul class="footer-navigator__list"> 
+        <li class="footer-navigator__item">
+        <a href="#" class="footer-navigator__link">Спецпроєкти</a>
+        </li>
+        <li class="footer-navigator__item">
+        <a href="#" class="footer-navigator__link">Думки</a>
+        </li>
+        <li class="footer-navigator__item">
+        <a href="#" class="footer-navigator__link">Блоги</a>
+        </li>
+        <li class="footer-navigator__item">
+        <a href="#" class="footer-navigator__link">Промокоди</a>
+        </li>
+        <li class="footer-navigator__item">
+        <a href="#" class="footer-navigator__link">iGaming</a>
+        </li>
+        <li class="footer-navigator__item">
+        <a href="#" class="footer-navigator__link">Crypto</a>
+        </li>
+        <li class="footer-navigator__item">
+        <a href="#" class="footer-navigator__link">LIGA. Радників</a>
+        </li>
+    </ul>
+    </div>
+    <!-- end footer-navigator  -->
+
+    <nav class="footer-nav footer__nav">
+    <ul class="footer-nav__list">
+        <li class="footer-nav__item">
+        <a href="#" class="footer-nav__link">Контакти</a>
+        </li>
+        <li class="footer-nav__item">
+        <a href="#" class="footer-nav__link">Реклама</a>
+        </li>
+        <li class="footer-nav__item">
+        <a href="#" class="footer-nav__link">Правила використання</a>
+        </li>
+        <li class="footer-nav__item">
+        <a href="#" class="footer-nav__link">Редакційний кодекс</a>
+        </li>
+        <li class="footer-nav__item">
+        <a href="#" class="footer-nav__link">Автори</a>
+        </li>
+        <li class="footer-nav__item">
+        <a href="#" class="footer-nav__link">Редакція</a>
+        </li>
+        <li class="footer-nav__item">
+        <a href="#" class="footer-nav__link">Архів</a>
+        </li>
+    </ul>
+
+    <ul class="footer-nav__list second-list">
+        <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link">RSS-канали</a>
+        </li>
+        <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link">Політика конфіденційності та захисту персональних даних</a>
+        </li>
+    </ul>
+    </nav>
+    <div class="partners-widget footer__partners">
+
+    <a href="#" class="partners-widget__link">
+        <img loading="lazy" src="/assets/svg/1.svg" width="123" height="25" alt="pic" class="partners-widget__img lazy">
+    </a>
+    <a href="#" class="partners-widget__link">
+        <img loading="lazy" src="/assets/svg/2.svg" width="70" height="34" alt="pic" class="partners-widget__img lazy">
+    </a>
+    <img loading="lazy" src="/assets/svg/3.svg" width="61" height="35" alt="pic" class="partners-widget__img lazy">
+    <img loading="lazy" src="/assets/svg/4.svg" width="165" height="33" alt="pic" class="partners-widget__img lazy">
+    <img loading="lazy" src="/assets/svg/5.svg" width="218" height="21" alt="pic" class="partners-widget__img lazy">
+    <img loading="lazy" src="/assets/svg/6.svg" width="154" height="25" alt="pic" class="partners-widget__img lazy">
+    <img loading="lazy" src="data:image/svg+xml,%3csvg%20width='27'%20height='33'%20viewBox='0%200%2027%2033'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_11401_9225)'%3e%3cpath%20d='M23.9139%2016.5641C23.9139%2015.7937%2023.3555%2015.0447%2023.1377%2014.376C22.9199%2013.7072%2023.6961%2012.5142%2023.2382%2012.0167C22.7803%2011.5191%2021.0046%2011.8562%2020.4182%2011.4817C20.3065%2011.4055%2020.1844%2011.3443%2020.0553%2011.2998C20.477%2011.2531%2020.8891%2011.1467%2021.2782%2010.9842C21.9119%2010.7194%2022.4722%2010.3164%2022.9143%209.80719C23.3358%209.30866%2023.6388%208.7281%2023.8022%208.10593C23.979%207.44527%2024.0672%206.76571%2024.0647%206.08368C24.0688%205.40169%2023.992%204.72145%2023.8357%204.05608C23.6945%203.44406%2023.4121%202.87008%2023.0093%202.37623C22.5813%201.87332%2022.0283%201.48149%2021.401%201.23671C20.5884%200.933957%2019.7207%200.790249%2018.8491%200.814066H13.064V2.76142H14.2478V9.58249H12.2376L8.9988%200.814066H5.26863L1.8791%209.58249H0.862793V13.1562H2.21972V19.9719H0.862793V23.5456H1.71157L5.10111%2032.3141H8.83128L12.2376%2023.5456H13.9128V30.5272H12.729V32.3141H22.8976V28.5692H20.6919V30.5272H16.9617V27.7667H20.3512V26.1617H16.9617V23.5456H20.6919V25.3325H22.7245V21.7588H11.0314V18.0139H8.82569V19.9612H5.26863V13.1562H6.45246V9.58249H4.77723L5.11786%208.44832H8.84803L9.18866%209.58249H8.15002V11.3693H19.1674C18.759%2011.6194%2018.3007%2011.7852%2017.8216%2011.8562C16.8724%2011.8562%2016.1911%2011.1821%2015.4875%2011.4656C14.7839%2011.7492%2014.8844%2012.3323%2014.4265%2012.8192C13.9686%2013.306%2011.5675%2012.5035%2011.7127%2014.2797C11.8188%2015.6064%2013.8011%2014.7505%2012.8965%2017.3665C12.6675%2018.0406%2012.9356%2020.1324%2013.4046%2020.6139C13.8737%2021.0954%2014.7392%2021.7374%2015.4819%2021.625C16.9952%2021.395%2017.0287%2020.6139%2017.978%2020.6139C18.9273%2020.6139%2019.6141%2021.4592%2020.3456%2021.6197C21.8589%2021.946%2022.5067%2021.3254%2022.8976%2020.7798C23.7352%2019.6028%2022.8976%2019.3888%2023.1154%2018.7201C23.3331%2018.0513%2023.9139%2017.3558%2023.9139%2016.5641ZM5.94989%2023.5456V21.9139H8.1556V23.5189H9.16632C8.88153%2024.3588%208.51298%2025.295%208.23936%2026.1403C7.96574%2026.9856%207.68096%2027.8309%207.4185%2028.6708C7.36639%2028.8848%207.30496%2029.0934%207.23423%2029.2967C7.1635%2029.5%207.09835%2029.714%207.03879%2029.9387H6.97736L6.59206%2028.7136C6.30913%2027.8505%206.02993%2027.007%205.75445%2026.1831C5.47524%2025.3592%205.19604%2024.4177%204.928%2023.5456H5.94431H5.94989ZM5.78237%206.65612C5.88288%206.38327%206.00573%206.12113%206.123%205.77874L6.46921%204.79436C6.59206%204.43771%206.70002%204.11672%206.79309%203.83139C6.88615%203.54606%206.96061%203.3071%207.01645%203.11451H7.07787C7.27146%203.72796%207.45759%204.32714%207.63628%204.91206C7.82614%205.4952%208.13327%206.00878%208.30079%206.65612H5.77678H5.78237ZM19.4075%209.33105C19.128%209.47772%2018.8159%209.55842%2018.4973%209.56644H17.3023V2.76142H18.4862C18.8095%202.73872%2019.1335%202.7962%2019.4269%202.92832C19.7203%203.06045%2019.9733%203.26275%2020.1614%203.51575C20.6758%204.31717%2020.9177%205.25185%2020.8538%206.19068C20.8413%206.68202%2020.7605%207.16957%2020.6137%207.64049C20.5181%208.02247%2020.3517%208.38488%2020.1223%208.71046C19.94%208.97579%2019.6927%209.19435%2019.4019%209.3471L19.4075%209.33105ZM26.9125%2010.7113C26.8432%2010.5187%2026.7129%2010.3516%2026.5397%2010.2333C26.3665%2010.1151%2026.1592%2010.0515%2025.9465%2010.0515C25.7338%2010.0515%2025.5264%2010.1151%2025.3533%2010.2333C25.1801%2010.3516%2025.0498%2010.5187%2024.9804%2010.7113L24.0814%2012.0167H25.6059L25.5724%2011.9471C25.7528%2012.0152%2025.9498%2012.0325%2026.1401%2011.9968C26.3304%2011.9611%2026.5061%2011.874%2026.6464%2011.7457C26.7867%2011.6175%2026.8858%2011.4535%2026.932%2011.273C26.9781%2011.0926%2026.9695%2010.9032%2026.9069%2010.7274L26.9125%2010.7113Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_11401_9225'%3e%3crect%20width='26.1'%20height='31.5'%20fill='white'%20transform='translate(0.862793%200.814697)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" width="26" height="32" alt="pic" class="partners-widget__img lazy">
+    <img loading="lazy" src="/assets/svg/8.svg" width="89" height="24" alt="pic" class="partners-widget__img lazy">
+    <img loading="lazy" src="/assets/svg/9.svg" width="129" height="31" alt="pic" class="partners-widget__img lazy">
+    </div>
+
+    <div class="copyright footer__copyright">
+        <div class="copyright__text">Матеріали зі знаками Ⓡ, Ⓟ, Новини компаній, Пресреліз, а також матеріали пресцентру ІА "ЛІГАБізнесІнформ" публікуються на правах реклами.<br><br>ПАРТНЕРСЬКИЙ ПРОЄКТ — маркування для платних матеріалів, що створюються LIGA.net в партнерстві з замовником. Тексти та верстку готує відділ нативного контенту LIGA.net.<br><br>СПЕЦПРОЄКТ — маркування для статтей, що публікуються на правах реклами. Тексти створюються відділом нативного контенту LIGA.net або надаються рекламодавцем. До 1.07.2024 такі матеріали маркувалися ЗА ПІДТРИМКИ.</div>
+        <div class="copyright__text">
+            Ⓒ Інформаційна агенція  ЛIГАБiзнесIнформ <br> 2007–2022
+
+            <a href="https://www.jti-app.com/report/gAqEWMLkOMLbwmxQ" target="_blank" rel="noopener" class="copyright__link">
+                <svg>
+                    <use xlink:href="/assets/svg/sprite.svg#jti"></use>
+                </svg>
+            </a>
+        </div>
+  </div>
+</footer>
+<!-- end footer -->
+
+        </div>
+
+
+        
+
+        <script>  
+            var page_domain = location.hostname;
+            var main_domain = 'https://maindev.liga.net';
+            var current_domain = 'https://maindev.liga.net';
+            var is_subscribe;
+            var cdn = 'http://localhost:3000/';
+            var lang = 'uk';
+            var page_url = location.hostname;
+            var page_razdel = location.hostname;
+            var page_rubric = location.hostname;
+            var page_tags = location.hostname;
+            var page_id = '';
+            var page_theme_id = '';
+        
+            var is_login = true;
+            var isSubscribe = false;
+            const isHideAdvert = function() {
+                var isHideAdvert = false;
+        
+                return isHideAdvert;
+            }
+            
+            if (!isHideAdvert()){
+                let grid = document.querySelector('.section-default__grid--big');
+                let lifeGrid = document.querySelector('.grid-layer--life');
+        
+                if(grid){
+                    grid.classList.add('show-banner');
+                }
+        
+                if(lifeGrid){
+                    lifeGrid.classList.add('show-banner');
+                }
+            }
+        
+        </script>
+
+        <!-- 
+    <script>
+        //var socialModalsExpires = [0.041666667, 0.010416667]; // 60, 15
+        var socialModalsExpires = [365, 3];
+        var socialModals = {
+            telegram1: {
+                link: 'https://t.me/+R0CqSvPhmoAzMDky',
+                title: "Хроніки бізнесу <br> без політики",
+                text: "Тримай руку на пульсі",
+                alias: 'telegram'
+            },
+            telegram2: {
+                link: 'https://t.me/+R0CqSvPhmoAzMDky',
+                title: "Економіка простими словами",
+                text: "Дізнавайтесь першими та дійте швидше",
+                alias: 'telegram'
+            },
+            telegram3: {
+                link: 'https://t.me/+R0CqSvPhmoAzMDky',
+                title: "Все про бізнес, економіку і фінанси",
+                text: "Головні новини без політичного шуму",
+                alias: 'telegram'
+            }
+            /*,youtube: {
+                link: 'https://www.youtube.com/liganet?sub_confirmation=1',
+                title: "Підпишись на наш YouTube",
+                text: "Пояснюємо складні речі простими словами",
+                alias: 'youtube'
+            },
+            instagram: {
+                link: 'https://bit.ly/3yb2G5g',
+                title: "Підписуйтесь на наш Instagram!",
+                text: "Корисні поради, прості пояснення та історії сьогодення",
+                alias: 'instagram'
+            },
+            facebook: {
+                link: 'https://bit.ly/3ybqe9S',
+                title: "Головні новини у вашій стрічці Facebook",
+                text: "Будьте в курсі подій навіть під час відпочинку",
+                alias: 'facebook'
+            }*/
+        };
+    </script> -->
+    <script src="/assets/js/global.js"></script>
+</body>
+</html>
+
